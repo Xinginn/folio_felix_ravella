@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Chatbot Overlay-->
+  <div id="chat-overlay" class="active">
+    <!-- chatbot header -->
+    <div class="chat-header skeleton">
+      <div class="chat-header-avatar skeleton"></div>
+      <div class="chat-header-names skeleton">
+        <div>Félix Ravella</div>
+        <div>Développeur Web</div>
+      </div>
+    </div>
+
+    <!-- Chat body -->
+    <div class="chat-body skeleton">
+      content
+    </div>
+
+    <!-- Option buttons -->
+    <div class="chat-options skeleton">
+      <div class="options-container">
+        <button onclick="optionClicked('bio')">Bio</button>
+        <button onclick="optionClicked('folio')">Folio</button>
+        <button onclick="optionClicked('parcours')">Parcours</button>
+        <button onclick="optionClicked('skills')">Skills</button>
+        
+      </div>
+      options
+    </div>
+  </div>
+
+  <!-- Chatbot button -->
+  <div id="chat-button" class="" onclick="toggleChatBot()"></div>
+
+  <section id="bio" class="skeleton" style="background-color: aqua;">
+    <div class="container">
+      <h1>Qui suis-je</h1>
+    </div>
+
+  </section>
+
+  <section id="folio" class="skeleton">
+    <div class="container">
+      <h1>Folio</h1>
+    </div>
+  </section>
+
+  <section id="parcours" class="skeleton">
+    <div class="container skeleton">
+      <h1>Parcours</h1>
+    </div>
+  </section>
+
+  <section id="skills" class="skeleton">
+    <div class="container">
+      <h1>Skills</h1>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<script>
+  var chatBotOverlay = document.getElementById('chat-overlay');
+  var chatBotButton = document.getElementById('chat-button');
+
+
+  function toggleChatBot(){
+    chatBotOverlay.classList.toggle('active');
+    chatBotButton.classList.toggle('active');
+  }
+
+  function optionClicked(section){
+    document.getElementById(section).scrollIntoView(true);
+    console.log(section);
+    toggleChatBot();
+  }
+</script>

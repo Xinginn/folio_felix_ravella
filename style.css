@@ -1,0 +1,98 @@
+/* TODO delete ME */
+.skeleton {
+  box-sizing: border-box;
+  border: solid red 1px;
+}
+
+/*  remove default margins and horizontal scrollbar*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+
+/* custom style for elements */
+/* ------ chatBot ------ */
+#chat-overlay {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 100vh;
+  transition: left 0.5s;
+}
+
+#chat-overlay.active {
+  left: 0;
+}
+
+.chat-header {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 16%;
+  align-self: flex-start;
+}
+
+.chat-header-avatar {
+  background-color: gray;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-header-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-body {
+  background-color: #00000033;
+  width: 100%;
+  flex-grow: 2;
+}
+
+.chat-options {
+  background-color: lightgray;
+  width: 100%;
+  height: 20%;
+}
+
+/* ------ end chatBot ------ */
+
+/* ------ misc content ------ */
+#chat-button {
+  position: fixed;
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: -25px;
+  left: 20px;
+  transition: bottom 0.5s;
+}
+
+#chat-button.active {
+  bottom: 20px;
+}
+
+section {
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* ------ end misc ------ */
