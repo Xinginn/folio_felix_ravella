@@ -9,6 +9,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
+<script>
+   const data = [
+    {
+      title: "title1",
+      img_uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1024px-Image_created_with_a_mobile_phone.png",
+      text: "Lorem1"
+    },
+    {
+      title: "title2",
+      img_uri: "url2",
+      text: "Lorem2"
+    },
+    {
+      title: "title3",
+      img_uri: "url3",
+      text: "Lorem3"
+    },
+    {
+      title: "title4",
+      img_uri: "url4",
+      text: "Lorem4"
+    },
+    {
+      title: "title5",
+      img_uri: "url5",
+      text: "Lorem5"
+    },
+    {
+      title: "title6",
+      img_uri: "url6",
+      text: "Lorem6"
+    }
+  ]
+</script>
+
 <body>
 
   <!-- Chatbot Overlay-->
@@ -52,64 +88,70 @@
   <!-- Chatbot button -->
   <div id="chat-button" class="active" onclick="toggleChatBot()"></div>
 
-  <section id="bio" class="skeleton" style="background-color: aqua;">
-    <div class="container">
-      <h1>Qui suis-je</h1>
+  <section id="bio" class="">
+    <h1>Qui suis-je</h1>
+    <div class="section-content skeleton">
+
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      <p>" Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
 
   </section>
 
-  <section id="folio" class="skeleton">
-    <div class="container">
-      <h1>Folio</h1>
+  <section id="folio" class="">
+    <h1>Folio</h1>
+
+    <div class="section-content skeleton">
       <div class="project-cards-container skeleton">
         <!-- card -->
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(0)">
+          <div class="project-card-title">Title1</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(1)">
+          <div class="project-card-title">Title2</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(2)">
+          <div class="project-card-title" onclick="toggleProjectLayout(0)">Title3</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(3)">
+          <div class="project-card-title">Title4</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(4)">
+          <div class="project-card-title">Title5</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
-        <div class="project-card skeleton">
-          <div class="project-card-title">Title</div>
+        <div class="project-card" onclick="toggleProjectLayout(5)">
+          <div class="project-card-title">Title6</div>
           <div class="project-card-content" style="background-color: yellow;"></div>
         </div>
       </div>
+    </div>
 
-      <div id="folio-overlay">
-        
+    <div id="folio-overlay" class="" onclick="toggleProjectLayout(null)">
+      <div id="folio-overlay-content">
+        <h2 id="folio-overlay-title">Project tile</h2>
+        <img id="folio-overlay-img" src="">
+
+        </img>
+        <p id="folio-overlay-text">Lorem ipsum</p>
       </div>
-
-
-
     </div>
+
     </div>
   </section>
 
-  <section id="parcours" class="skeleton">
-    <div class="container skeleton">
-      <h1>Parcours</h1>
-    </div>
+  <section id="parcours" class="">
+    <h1>Parcours</h1>
+    <div class="section-content skeleton"></div>
   </section>
 
-  <section id="skills" class="skeleton">
-    <div class="container">
-      <h1>Skills</h1>
-    </div>
+  <section id="skills" class="">
+    <h1>Skills</h1>
+    <div class="section-content skeleton"></div>
   </section>
 
 </body>
@@ -120,6 +162,9 @@
   var chatBotOverlay = document.getElementById('chat-overlay');
   var chatBotButton = document.getElementById('chat-button');
 
+  var projectOverlayTitle = document.getElementById('folio-overlay-title');
+  var projectOverlayImg = document.getElementById('folio-overlay-img');
+  var projectOverlayText = document.getElementById('folio-overlay-text');
 
   function toggleChatBot() {
     chatBotOverlay.classList.toggle('active');
@@ -128,7 +173,14 @@
 
   function optionClicked(section) {
     document.getElementById(section).scrollIntoView(true);
-    console.log(section);
     toggleChatBot();
+  }
+
+  function toggleProjectLayout(index) {
+    if (index !== null){
+     projectOverlayTitle.innerText = data[index]['title'];
+     projectOverlayImg.setAttribute('src', data[index]['img_uri'])
+    }
+    document.getElementById('folio-overlay').classList.toggle('active');
   }
 </script>
