@@ -68,6 +68,48 @@ body {
   height: 20%;
 }
 
+.options-container {
+  margin: 10px;
+}
+
+.options-container div {
+  display: flex;
+  justify-content: stretch;
+}
+
+.options-container button {
+  text-decoration: none;
+  padding: 8px 40px;
+  margin: 2px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(104, 91, 179);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-container {
+  display: flex;
+  margin: 10px;
+}
+
+.input-container input {
+  flex-grow: 2;
+}
+
+.input-container button {
+  margin-left: 5px;
+  background-color: blue;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.input-container button:hover {
+  background-color: darkblue;
+}
 /* ------ end chatBot ------ */
 
 /* ------ misc content ------ */
@@ -94,5 +136,26 @@ section {
   width: 90%;
   margin: auto;
 }
-
 /* ------ end misc ------ */
+
+/* ------ folio project cards ------ */
+.project-cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.project-card {
+  height: 22vh;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-content {
+  flex-grow: 2;
+}
+
+/* ------ end project cards ------ */
