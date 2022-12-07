@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Félix Ravella</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,34 +13,52 @@
 <script>
    const data = [
     {
-      title: "title1",
-      img_uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1024px-Image_created_with_a_mobile_phone.png",
-      text: "Lorem1"
+      title: "Globulo",
+      img_uri: "assets/proj_globulo.gif",
+      text: [
+        "Serie de 4 serious games réalisés en 2021 durant mon alternance à l'agence Dezup pour la Fondation Leucémie Espoir. J'ai participé au design des mécaniques, et été acteur principal de l'implémentation, de l'intégration des graphismes et des animations.",
+        " Stack utilisée: Godot (moteur de jeu), GDScript (langage de script), VueJS (Framework frontend)"
+      ]
     },
     {
-      title: "title2",
-      img_uri: "url2",
-      text: "Lorem2"
+      title: "Snake multijoueur",
+      img_uri: "assets/proj_snake.gif",
+      text: [
+        "Jeu du snake en multijoueur réalisé pour la LowRes Jam 2019. Il a été réalisé en équipe de 2 en 15 jours, avec une resolution de 64 x 64 pixels.",
+        "Stack utilisée: Godot (moteur de jeu), GDScript (langage de script)"
+        ]
     },
     {
-      title: "title3",
-      img_uri: "url3",
-      text: "Lorem3"
+      title: "Acteurs du Nord-Isère",
+      img_uri: "assets/proj_adni_cropped.png",
+      text: [
+        "Site, à la fois annuaire et reseau social, réalisé durant mon alternance dans l'agence Web Dezup. J'ai participé à la réalisation du backend et des fonctionnalité de l'interface d'administration de compte.",
+        "Stack utilisée: Nest (framework backend), Graphql (langague de requete), VueJS (Framework frontend)"
+      ]
     },
     {
-      title: "title4",
-      img_uri: "url4",
-      text: "Lorem4"
+      title: "Wikiagri",
+      img_uri: "assets/proj_wikiagri_cropped.png",
+      text: [
+        "Site d'actualité agricoles developpé par l'agence Dezup. Mes taches étaient la résolution de bugs et faire evoluer le code source pour faciliter les montées de version.",
+        "Stack utilisée: Rails, mysql"
+      ]
     },
     {
-      title: "title5",
-      img_uri: "url5",
-      text: "Lorem5"
+      title: "Application comptable",
+      img_uri: "assets/proj_gsb_01.png",
+      text: [
+        "Applications comptable de gestion de frais (web et mobile) réalisées dans du projet encadré de fin de BTS.",
+        "Stack utilisée: Angular, Flutter, ExpressJs, mysql"
+      ]
     },
     {
-      title: "title6",
-      img_uri: "url6",
-      text: "Lorem6"
+      title: "Delipizz",
+      img_uri: "assets/proj_delipizz_cropped.png",
+      text: [
+        "Intégration d'un site vitrine à partir d'une maquette réalisé à mon début d'alternance dans l'agence Dezup (2020).",  
+        "Stack utilisée: Wordpress"
+      ]
     }
   ]
 </script>
@@ -89,11 +107,11 @@
   <div id="chat-button" class="active" onclick="toggleChatBot()"></div>
 
   <section id="bio" class="">
-    <h1>Qui suis-je</h1>
-    <div class="section-content skeleton">
-
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-      <p>" Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <h1>Felix Ravella</h1>
+    <h1>Developpeur Web</h1>
+    <div class="section-content" style="margin-top: -10vh;">
+      <p class="bio-text">33 ans, lyonnais, en reconversion professionnelle. Chevronné de code et de créations diverses, developpeur web de métier et jeu vidéo à mes heures perdues, j'ai toujours des projets en cours.</p>
+      <p class="bio-text">Quand suis pas devant mon laptop a travailler, créer ou jouer, j'anime de jeux de rôles et je fais du théatre d'improvisation.</p>
     </div>
 
   </section>
@@ -101,32 +119,44 @@
   <section id="folio" class="">
     <h1>Folio</h1>
 
-    <div class="section-content skeleton">
-      <div class="project-cards-container skeleton">
+    <div class="section-content">
+      <div class="project-cards-container">
         <!-- card -->
         <div class="project-card" onclick="toggleProjectLayout(0)">
-          <div class="project-card-title">Title1</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">Globulo</div>
+          <div class="project-card-content">
+            <img src="assets/proj_globulo.gif">
+          </div>
         </div>
         <div class="project-card" onclick="toggleProjectLayout(1)">
-          <div class="project-card-title">Title2</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">Snake</div>
+          <div class="project-card-content">
+            <img src="assets/proj_snake.gif">
+          </div>
         </div>
         <div class="project-card" onclick="toggleProjectLayout(2)">
-          <div class="project-card-title" onclick="toggleProjectLayout(0)">Title3</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">AdNI</div>
+          <div class="project-card-content">
+            <img src="assets/proj_adni_cropped.png">
+          </div>
         </div>
         <div class="project-card" onclick="toggleProjectLayout(3)">
-          <div class="project-card-title">Title4</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">Wikiagri</div>
+          <div class="project-card-content">
+            <img src="assets/proj_wikiagri_cropped.png">
+          </div>
         </div>
         <div class="project-card" onclick="toggleProjectLayout(4)">
-          <div class="project-card-title">Title5</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">Projet de BTS</div>
+          <div class="project-card-content">
+            <img src="assets/proj_gsb_01.png">
+          </div>
         </div>
         <div class="project-card" onclick="toggleProjectLayout(5)">
-          <div class="project-card-title">Title6</div>
-          <div class="project-card-content" style="background-color: yellow;"></div>
+          <div class="project-card-title">Delipizz</div>
+          <div class="project-card-content">
+            <img src="assets/proj_delipizz_cropped.png">
+          </div>
         </div>
       </div>
     </div>
@@ -135,9 +165,8 @@
       <div id="folio-overlay-content">
         <h2 id="folio-overlay-title">Project tile</h2>
         <img id="folio-overlay-img" src="">
-
-        </img>
-        <p id="folio-overlay-text">Lorem ipsum</p>
+        <p id="folio-overlay-text-0">Lorem ipsum</p>
+        <p id="folio-overlay-text-1">Lorem ipsum</p>
       </div>
     </div>
 
@@ -146,12 +175,65 @@
 
   <section id="parcours" class="">
     <h1>Parcours</h1>
-    <div class="section-content skeleton"></div>
+    <div class="section-content">
+
+      <h2>2022 - actuel</h2>
+      <p>B3 Developpeur Web - MyDigitalSchool Lyon</p>
+      <h2>2022 - actuel</h2>
+      <p>Alternant developpeur web - Centre d'Innovation Holcim</p>
+      <h2>2020 - 2022</h2>
+      <p>BTS SIO option Solution Logicielle et Applications Métiers</p>
+      <h2>2020 - 2021</h2>
+      <p>Alternant developpeur web - Agence web Dezup</p>
+      <h2>2007</h2>
+      <p>Baccalauréat scientifique spécialité Biologie</p>
+    </div>
   </section>
 
   <section id="skills" class="">
     <h1>Skills</h1>
-    <div class="section-content skeleton"></div>
+    <div class="section-content">
+      <h2>Langages</h2>
+      <div class="skill-row">
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_ruby.png" alt="Ruby">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_python.png" alt="Python">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_php.png" alt="Php">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_js.png" alt="JavaScript">
+        </div>
+      </div>
+      <h2>Frameworks</h2>
+      <div class="skill-row">
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_angular.png" alt="Angular">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_node.png" alt="NodeJS">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_vue.png" alt="VueJS">
+        </div>
+      </div>
+      <h2>Soft skills</h2>
+      <div class="skill-row">
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_english.png" alt="English">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_problem_solving.png" alt="Problem Solving">
+        </div>
+        <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_out_box.png" alt="Thinking out of the box">
+        </div>
+
+      </div>
+    </div>
   </section>
 
 </body>
@@ -164,7 +246,8 @@
 
   var projectOverlayTitle = document.getElementById('folio-overlay-title');
   var projectOverlayImg = document.getElementById('folio-overlay-img');
-  var projectOverlayText = document.getElementById('folio-overlay-text');
+  var projectOverlayText0 = document.getElementById('folio-overlay-text-0');
+  var projectOverlayText1 = document.getElementById('folio-overlay-text-1');
 
   function toggleChatBot() {
     chatBotOverlay.classList.toggle('active');
@@ -179,7 +262,9 @@
   function toggleProjectLayout(index) {
     if (index !== null){
      projectOverlayTitle.innerText = data[index]['title'];
-     projectOverlayImg.setAttribute('src', data[index]['img_uri'])
+     projectOverlayImg.setAttribute('src', data[index]['img_uri']);
+     projectOverlayText0.innerText = data[index]['text'][0];
+     projectOverlayText1.innerText = data[index]['text'][1];
     }
     document.getElementById('folio-overlay').classList.toggle('active');
   }
