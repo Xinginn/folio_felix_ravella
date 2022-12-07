@@ -11,7 +11,7 @@
 
 
 <script>
-   const data = [
+  const data = [
     {
       title: "Globulo",
       img_uri: "assets/proj_globulo.gif",
@@ -26,7 +26,7 @@
       text: [
         "Jeu du snake en multijoueur réalisé pour la LowRes Jam 2019. Il a été réalisé en équipe de 2 en 15 jours, avec une resolution de 64 x 64 pixels.",
         "Stack utilisée: Godot (moteur de jeu), GDScript (langage de script)"
-        ]
+      ]
     },
     {
       title: "Acteurs du Nord-Isère",
@@ -56,7 +56,7 @@
       title: "Delipizz",
       img_uri: "assets/proj_delipizz_cropped.png",
       text: [
-        "Intégration d'un site vitrine à partir d'une maquette réalisé à mon début d'alternance dans l'agence Dezup (2020).",  
+        "Intégration d'un site vitrine à partir d'une maquette réalisé à mon début d'alternance dans l'agence Dezup (2020).",
         "Stack utilisée: Wordpress"
       ]
     }
@@ -68,7 +68,7 @@
   <!-- Chatbot Overlay-->
   <div id="chat-overlay" class="">
     <!-- chatbot header -->
-    <div class="chat-header skeleton">
+    <div class="chat-header">
       <div class="chat-header-avatar skeleton"></div>
       <div class="chat-header-names skeleton">
         <div>Félix Ravella</div>
@@ -77,12 +77,12 @@
     </div>
 
     <!-- Chat body -->
-    <div class="chat-body skeleton">
+    <div class="chat-body">
       content
     </div>
 
     <!-- Option buttons -->
-    <div class="chat-options skeleton">
+    <div class="chat-options">
       <div class="options-container">
         <div>
           <button onclick="optionClicked('bio')">Bio</button>
@@ -104,14 +104,18 @@
   </div>
 
   <!-- Chatbot button -->
-  <div id="chat-button" class="active" onclick="toggleChatBot()"></div>
+  <div id="chat-button" class="active" onclick="toggleChatBot()">
+    <img src="assets/icon_chat.png" width=75% height=75% alt="">
+  </div>
 
   <section id="bio" class="">
     <h1>Felix Ravella</h1>
     <h1>Developpeur Web</h1>
     <div class="section-content" style="margin-top: -10vh;">
-      <p class="bio-text">33 ans, lyonnais, en reconversion professionnelle. Chevronné de code et de créations diverses, developpeur web de métier et jeu vidéo à mes heures perdues, j'ai toujours des projets en cours.</p>
-      <p class="bio-text">Quand suis pas devant mon laptop a travailler, créer ou jouer, j'anime de jeux de rôles et je fais du théatre d'improvisation.</p>
+      <p class="bio-text">33 ans, lyonnais, en reconversion professionnelle. Chevronné de code et de créations diverses,
+        developpeur web de métier et jeu vidéo à mes heures perdues, j'ai toujours des projets en cours.</p>
+      <p class="bio-text">Quand suis pas devant mon laptop a travailler, créer ou jouer, j'anime de jeux de rôles et je
+        fais du théatre d'improvisation.</p>
     </div>
 
   </section>
@@ -161,6 +165,7 @@
       </div>
     </div>
 
+    <!-- Togglable overlay for project info display -->
     <div id="folio-overlay" class="" onclick="toggleProjectLayout(null)">
       <div id="folio-overlay-content">
         <h2 id="folio-overlay-title">Project tile</h2>
@@ -169,6 +174,7 @@
         <p id="folio-overlay-text-1">Lorem ipsum</p>
       </div>
     </div>
+    <!-- End togglable overlay -->
 
     </div>
   </section>
@@ -244,6 +250,7 @@
   var chatBotOverlay = document.getElementById('chat-overlay');
   var chatBotButton = document.getElementById('chat-button');
 
+
   var projectOverlayTitle = document.getElementById('folio-overlay-title');
   var projectOverlayImg = document.getElementById('folio-overlay-img');
   var projectOverlayText0 = document.getElementById('folio-overlay-text-0');
@@ -260,11 +267,11 @@
   }
 
   function toggleProjectLayout(index) {
-    if (index !== null){
-     projectOverlayTitle.innerText = data[index]['title'];
-     projectOverlayImg.setAttribute('src', data[index]['img_uri']);
-     projectOverlayText0.innerText = data[index]['text'][0];
-     projectOverlayText1.innerText = data[index]['text'][1];
+    if (index !== null) {
+      projectOverlayTitle.innerText = data[index]['title'];
+      projectOverlayImg.setAttribute('src', data[index]['img_uri']);
+      projectOverlayText0.innerText = data[index]['text'][0];
+      projectOverlayText1.innerText = data[index]['text'][1];
     }
     document.getElementById('folio-overlay').classList.toggle('active');
   }

@@ -56,7 +56,7 @@ h2{
 
 
 .chat-header {
-  background-color: lightgray;
+  background-color: #ebf4ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@ h2{
 }
 
 .chat-body {
-  background-color: #00000033;
+  background-color: #00000066;
   width: 100%;
   flex-grow: 2;
 }
@@ -118,11 +118,13 @@ h2{
 
 .input-container {
   display: flex;
+  justify-content: end;
   margin: 10px;
 }
 
-.input-container input {
-  flex-grow: 2;
+.input-container > input {
+  width: 100%;
+  margin-left: 4px;
 }
 
 .input-container button {
@@ -143,17 +145,22 @@ h2{
 /* ------ misc content ------ */
 #chat-button {
   position: fixed;
-  background-color: green;
-  height: 50px;
-  width: 50px;
+  height: 64px;
+  width: 64px;
   border-radius: 50%;
-  bottom: -25px;
-  left: 20px;
+  bottom: -45px;
+  left: 25px;
   transition: bottom 0.5s;
+  background-color: white;
+  border: solid 2px #39a347;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #chat-button.active {
-  bottom: 20px;
+  bottom: 25px;
 }
 
 section {
@@ -221,29 +228,33 @@ section h1 {
 
 }
 
+
+
 #folio-overlay {
-  height: 100vh;
-  width: 100vw;
-  display: none;
-  justify-content: center;
+  height: 0;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
   top: 0;
   left: 0;
-  transition-property: opacity, display;
-  transition-duration: 0.5s, 0s;
-  transition-delay: 0s, 0s;
+  opacity: 0.0;
   background-color: #55555555;
-  opacity: 0;
+  transition-property: opacity, visibility, height;
+  transition-duration: 0.5s, 0s, 0s;
+  transition-delay: 0.0s, 0.5s, 0.5s;
+
 }
 
 #folio-overlay.active {
-  display: flex;
-  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   opacity: 1.0;
-  transition-property: opacity, display;
-  transition-duration: 0.5s, 0s;
-  transition-delay: 0s, 0.5s;
+  visibility: visible;
+  transition-delay: 0.0s, 0.0s, 0.0s;
 }
+
+
 
 #folio-overlay-content {
   height: 75%;
