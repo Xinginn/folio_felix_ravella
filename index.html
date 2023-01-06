@@ -11,6 +11,19 @@
 
 
 <script>
+  const sectionRequestTexts = {
+    'bio': "Parlez-moi de vous",
+    'folio': "Quelles sont vos réalisations?",
+    'parcours': "Quel est votre parcours?",
+    'skills': "Dites m'en plus sur vos compétences"
+  };
+  const sectionRequestReplies = {
+    'bio': "Avec plaisir",
+    'folio': "Je vous montre",
+    'parcours': "Regardez ça",
+    'skills': "Sans problèmes"
+  };
+
   const data = [
     {
       title: "Globulo",
@@ -77,8 +90,9 @@
     </div>
 
     <!-- Chat body -->
-    <div class="chat-body">
-      content
+    <div id="chat-body">
+      <div id="chat-message-container">
+      </div>
     </div>
 
     <!-- Option buttons -->
@@ -91,7 +105,7 @@
         </div>
         <div>
           <button onclick="optionClicked('parcours')">Parcours</button>
-          <button onclick="optionClicked('skills')">Skills</button>
+          <button onclick="optionClicked('skills')">Compétences</button>
         </div>
       </div>
 
@@ -197,7 +211,7 @@
   </section>
 
   <section id="skills" class="">
-    <h1>Skills</h1>
+    <h1>Compétences</h1>
     <div class="section-content">
       <h2>Langages</h2>
       <div class="skill-row">
@@ -262,8 +276,16 @@
   }
 
   function optionClicked(section) {
-    document.getElementById(section).scrollIntoView(true);
-    toggleChatBot();
+    addMessage(sectionRequestTexts[section])
+    setTimeout( function () {
+      addMessage(sectionRequestReplies[section])
+    }, 400)
+    setTimeout( function () {
+      document.getElementById(section).scrollIntoView(true);
+    }, 700)
+    setTimeout( function () {
+      toggleChatBot();
+    }, 2000)
   }
 
   function toggleProjectLayout(index) {
@@ -274,5 +296,12 @@
       projectOverlayText1.innerText = data[index]['text'][1];
     }
     document.getElementById('folio-overlay').classList.toggle('active');
+  }
+
+  function addMessage(content) {
+    var newElement = document.createElement('div');
+    newElement.classList.add('chat-message');
+    newElement.innerText = content;
+    document.getElementById('chat-message-container').appendChild(newElement);
   }
 </script>
