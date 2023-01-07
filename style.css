@@ -54,7 +54,7 @@ h2{
   #chat-overlay.active {left: 50vw;}
 }
 
-.chat-header {
+#chat-header {
   background-color: #ebf4ff;
   display: flex;
   align-items: center;
@@ -65,15 +65,19 @@ h2{
   font-family: 'Poppins', sans-serif;
 }
 
-.chat-header-avatar {
-  background-color: #ebf4ff;
+#chat-header-avatar {
   height: 50px;
   width: 50px;
-  border-radius: 50%;
   margin-right: 10px;
 }
 
-.chat-header-names {
+#chat-header-avatar img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+#chat-header-names {
   display: flex;
   flex-direction: column;
 }
@@ -96,7 +100,7 @@ h2{
 
 .chat-message {
   margin-top: 8px;
-  align-self: start;
+  align-self: end;
   background-color: #39a347;
   color: white;
   padding: 10px;
@@ -109,7 +113,7 @@ h2{
 }
 
 .chat-message:nth-child(2n) {
-  align-self: end;
+  align-self: start;
 }
 
 @media only screen and (min-width: 700px){
@@ -212,6 +216,20 @@ section h1 {
 /* ------ bio ------*/
 #bio{
   color: white;
+}
+
+#bio-avatar {
+  width: 200px;
+  height: 200px;
+  border: white solid 4px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+#bio-avatar img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
 }
 
 .bio-text {
