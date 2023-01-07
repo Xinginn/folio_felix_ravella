@@ -117,7 +117,7 @@ h2{
 }
 
 @media only screen and (min-width: 700px){
-  .chat-message-container {width: 80%;}
+   #chat-message-container {width: 80%;}
 }
 
 .chat-options {
@@ -210,12 +210,13 @@ section h1 {
   align-self: flex-start;
   flex-grow: 0;
 }
-
 /* ------ end misc ------ */
 
-/* ------ bio ------*/
+
+/* ------ Bio ------*/
 #bio{
   color: white;
+  justify-content: space-around;
 }
 
 #bio-avatar {
@@ -226,6 +227,12 @@ section h1 {
   align-self: center;
 }
 
+@media only screen and (min-width: 700px){
+  #bio-avatar {margin-bottom: 15%;}
+}
+
+
+
 #bio-avatar img {
   border-radius: 50%;
   max-width: 100%;
@@ -235,6 +242,7 @@ section h1 {
 .bio-text {
   font-size: 22px;
 }
+/* ------ End Bio ------*/
 
 /* ------ folio project cards ------ */
 .section-content {
@@ -274,7 +282,6 @@ section h1 {
 
 .project-card-content img {
   width: 100%;
-
 }
 
 
@@ -313,6 +320,7 @@ section h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 8px;
 }
 
 #folio-overlay-img {
