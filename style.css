@@ -66,8 +66,8 @@ h2{
 }
 
 #chat-header-avatar {
-  height: 50px;
-  width: 50px;
+  height: 64px;
+  width: 64px;
   margin-right: 10px;
 }
 
@@ -100,7 +100,7 @@ h2{
 
 .chat-message {
   margin-top: 8px;
-  align-self: end;
+  align-self: start;
   background-color: #39a347;
   color: white;
   padding: 10px;
@@ -113,7 +113,7 @@ h2{
 }
 
 .chat-message:nth-child(2n) {
-  align-self: start;
+  align-self: end;
 }
 
 @media only screen and (min-width: 700px){
@@ -158,17 +158,21 @@ h2{
 }
 
 .input-container > input {
-  width: 100%;
-  margin-left: 4px;
+  width: 92%;
 }
 
-.input-container button {
+.input-container div {
   margin-left: 5px;
-  background-color: blue;
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   border: none;
+}
+
+.input-container > div > img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
 }
 
 .input-container button:hover {
@@ -183,7 +187,7 @@ h2{
   height: 64px;
   width: 64px;
   border-radius: 50%;
-  bottom: -45px;
+  bottom: -20px;
   left: 25px;
   transition: bottom 0.5s;
   background-color: white;

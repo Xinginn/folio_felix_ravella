@@ -94,6 +94,7 @@
     <!-- Chat body -->
     <div id="chat-body">
       <div id="chat-message-container">
+        <div class="chat-message">Bonjour! En quoi puis-je vous aider?</div>
       </div>
     </div>
 
@@ -113,7 +114,9 @@
 
       <div class="input-container">
         <input type="text" placeholder="Que cherchez-vous?">
-        <button></button>
+        <div class="skeleton">
+          <img src="assets/icon_send.png">
+        </div>
       </div>
 
     </div>
@@ -303,7 +306,7 @@
     }, 700)
     setTimeout( function () {
       toggleChatBot();
-    }, 2000)
+    }, 1800)
   }
 
   function toggleProjectLayout(index) {
