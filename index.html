@@ -15,13 +15,15 @@
     'bio': "Parlez-moi de vous",
     'folio': "Quelles sont vos réalisations?",
     'parcours': "Quel est votre parcours?",
-    'skills': "Dites m'en plus sur vos compétences"
+    'skills': "Dites m'en plus sur vos compétences.",
+    'contact': "Comment puis-je vous contacter?"
   };
   const sectionRequestReplies = {
-    'bio': "Avec plaisir",
-    'folio': "Je vous montre",
-    'parcours': "Regardez ça",
-    'skills': "Sans problèmes"
+    'bio': "Avec plaisir!",
+    'folio': "Je vous montre.",
+    'parcours': "Regardez ça!",
+    'skills': "Sans problèmes.",
+    'contact': "N'hésitez pas à faire signe!"
   };
 
   const data = [
@@ -110,14 +112,19 @@
           <button onclick="optionClicked('parcours')">Parcours</button>
           <button onclick="optionClicked('skills')">Compétences</button>
         </div>
+        <div>
+          <button onclick="optionClicked('contact')">Contact</button>
+        </div>
       </div>
 
+      <!-- Abandonned feature
       <div class="input-container">
         <input type="text" placeholder="Que cherchez-vous?">
         <div class="skeleton">
           <img src="assets/icon_send.png">
         </div>
       </div>
+      -->
 
     </div>
   </div>
@@ -237,13 +244,13 @@
       <h2>Langages</h2>
       <div class="skill-row">
         <div class="skill-circle">
+          <img class="skill-img" width=100% height=100% src="assets/icon_php.png" alt="Php">
+        </div>
+        <div class="skill-circle">
           <img class="skill-img" width=100% height=100% src="assets/icon_ruby.png" alt="Ruby">
         </div>
         <div class="skill-circle">
           <img class="skill-img" width=100% height=100% src="assets/icon_python.png" alt="Python">
-        </div>
-        <div class="skill-circle">
-          <img class="skill-img" width=100% height=100% src="assets/icon_php.png" alt="Php">
         </div>
         <div class="skill-circle">
           <img class="skill-img" width=100% height=100% src="assets/icon_js.png" alt="JavaScript">
@@ -252,10 +259,10 @@
       <h2>Frameworks</h2>
       <div class="skill-row">
         <div class="skill-circle">
-          <img class="skill-img" width=100% height=100% src="assets/icon_angular.png" alt="Angular">
+          <img class="skill-img" width=100% height=100% src="assets/icon_node.png" alt="NodeJS">
         </div>
         <div class="skill-circle">
-          <img class="skill-img" width=100% height=100% src="assets/icon_node.png" alt="NodeJS">
+          <img class="skill-img" width=100% height=100% src="assets/icon_angular.png" alt="Angular">
         </div>
         <div class="skill-circle">
           <img class="skill-img" width=100% height=100% src="assets/icon_vue.png" alt="VueJS">
@@ -274,6 +281,21 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <div class="section-content">
+      
+      <h2>Mail: felix.ravella@gmail.com</h2>
+      <h2>
+        <a href="https://github.com/Xinginn"> Github</a>
+      </h2>
+      <h2>
+        <a href="https://gitlab.com/felix.ravella">Gitlab</a>
+      </h2>
+
     </div>
   </section>
 

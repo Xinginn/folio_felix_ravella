@@ -213,6 +213,7 @@ section {
 section h1 {
   align-self: flex-start;
   flex-grow: 0;
+  font-size: 60px;
 }
 /* ------ end misc ------ */
 
@@ -350,7 +351,7 @@ section h1 {
 /* ------  skills ------ */
 
 #skills{
-  color: white;
+  color: black;
 }
 
 .skill-circle {
@@ -384,3 +385,8 @@ section h1 {
 }
 
 /* ------ end skills ------ */
+
+/* ------ contact ------ */
+#contact, #contact a, #contact a:visited{
+  color: white;
+}
